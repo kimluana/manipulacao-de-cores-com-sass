@@ -1,0 +1,102 @@
+/* Para criar gradientes é preciso incluir a biblioteca do Compass*/
+/* line 14, ../sass/estilo.scss */
+body {
+  font-family: 'Muli', sans-serif;
+  color: #203356;
+  background-color: #f8fafc;
+}
+
+/* line 20, ../sass/estilo.scss */
+ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 28, ../sass/estilo.scss */
+li {
+  width: 100px;
+  height: 100px;
+  background-color: #5077bf;
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 41, ../sass/estilo.scss */
+#luminosidade {
+  width: 500px;
+  height: 160px;
+}
+/* line 45, ../sass/estilo.scss */
+#luminosidade li:first-child {
+  background-color: #7594cd;
+}
+/* line 49, ../sass/estilo.scss */
+#luminosidade li:last-child {
+  background-color: #3b5fa1;
+}
+
+/* line 59, ../sass/estilo.scss */
+#saturacao {
+  width: 500px;
+  height: 160px;
+}
+/* line 63, ../sass/estilo.scss */
+#saturacao li:first-child {
+  background-color: #2c6ce3;
+}
+/* line 67, ../sass/estilo.scss */
+#saturacao li:last-child {
+  background-color: #74829b;
+}
+
+/* line 74, ../sass/estilo.scss */
+#matiz {
+  width: 500px;
+  height: 160px;
+}
+/* line 79, ../sass/estilo.scss */
+#matiz li:last-child {
+  background-color: #5052bf;
+}
+
+/* line 88, ../sass/estilo.scss */
+#transparencia {
+  width: 500px;
+  height: 160px;
+}
+/* line 93, ../sass/estilo.scss */
+#transparencia li:last-child {
+  background-color: rgba(80, 119, 191, 0.5);
+}
+
+/* line 99, ../sass/estilo.scss */
+#gradientes {
+  width: 500px;
+  height: 160px;
+}
+/* line 103, ../sass/estilo.scss */
+#gradientes li {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5077bf), color-stop(100%, #74829b));
+  background-image: -webkit-linear-gradient(#5077bf, #74829b);
+  background-image: -moz-linear-gradient(#5077bf, #74829b);
+  background-image: -o-linear-gradient(#5077bf, #74829b);
+  background-image: linear-gradient(#5077bf, #74829b);
+}
+/* line 107, ../sass/estilo.scss */
+#gradientes li:first-child {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffffff), color-stop(100%, #2c6ce3));
+  background-image: -webkit-linear-gradient(left top, #ffffff, #2c6ce3);
+  background-image: -moz-linear-gradient(left top, #ffffff, #2c6ce3);
+  background-image: -o-linear-gradient(left top, #ffffff, #2c6ce3);
+  background-image: linear-gradient(left top, #ffffff, #2c6ce3);
+}
+/* line 111, ../sass/estilo.scss */
+#gradientes li:last-child {
+  background-image: -webkit-gradient(radial, 45px 45px, 0, 45px 45px, 30, color-stop(33.33333%, #5077bf), color-stop(100%, #3b5fa1));
+  background-image: -webkit-radial-gradient(45px 45px, #5077bf 10px, #3b5fa1 30px);
+  background-image: -moz-radial-gradient(45px 45px, #5077bf 10px, #3b5fa1 30px);
+  background-image: -o-radial-gradient(45px 45px, #5077bf 10px, #3b5fa1 30px);
+  background-image: radial-gradient(45px 45px, #5077bf 10px, #3b5fa1 30px);
+}

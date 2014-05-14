@@ -1,0 +1,114 @@
+/* Para criar gradientes é preciso incluir a biblioteca do Compass*/
+@import "compass"; 
+
+
+
+//Variáveis
+$base-color: #5077bf;
+$lines-width: 500px;
+$lines-height: 160px;
+
+
+
+//Definindo os blocos
+body {
+font-family: 'Muli', sans-serif;
+color: darken( $base-color, 30% );
+background-color: lighten( $base-color, 45% ); 
+}
+
+ul {
+display: block;
+list-style: none;  
+padding: 0;
+margin: 0;
+   }
+
+        
+li {
+width:100px;
+height:100px;
+background-color: $base-color;
+float: left;
+margin-right:20px;
+    }
+
+
+
+
+
+//Funções que alterar a luminosidade = lighten para clarear e darken para escurecer
+#luminosidade {
+width: $lines-width;
+height: $lines-height;
+
+li:first-child { 
+background-color: lighten( $base-color, 10% );
+               }
+        
+li:last-child {
+background-color: darken( $base-color, 10% );
+               }    
+   
+            }
+
+
+
+
+//Funções para alterar a saturação da variável = saturate e desaturate
+#saturacao {
+width: $lines-width;
+height: $lines-height;
+
+li:first-child { 
+background-color: saturate( $base-color, 30% );
+               }
+        
+li:last-child {
+background-color: desaturate( $base-color, 30% );
+              }   
+            }
+
+
+//A Função adjust-hue controla o matiz
+#matiz {
+width: $lines-width;
+height: $lines-height;
+
+
+li:last-child {
+background-color: adjust-hue( $base-color, 20% );
+              }    
+        }
+
+
+
+
+//Para ajustar a transparencia usamos o padrão rgba, .5 significa 50% de transparência
+#transparencia {
+width: $lines-width;
+height: $lines-height;
+
+
+li:last-child {
+background-color: rgba( $base-color, .5 );
+               }    
+               }
+
+//Podemos atribuir os background como linear-gradient ou radial-gradient
+#gradientes {
+width: $lines-width;
+height: $lines-height;
+    
+li {
+@include background-image(linear-gradient($base-color, #74829b)); // Não é preciso definir a posição quando for linear gradiente da esquerda para a direita.
+}    
+
+li:first-child { 
+@include background-image(linear-gradient(left top, #ffffff, #2c6ce3)); //Podemos defini-los como left top para fazer-lo surgir da esquerda para cima
+     }
+    
+li:last-child {
+@include background-image(radial-gradient(45px 45px, #5077bf 10px, #3b5fa1 30px)); // no radial gradiente temos que definir as posições e cores.
+     }    
+   }
